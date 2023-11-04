@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./captcha.js" ></script>
+
+    <style>
+        /* 验证码弹窗样式 */
+        .captcha-popup-curtain {
+            position: absolute;
+            background-color: rgba(0,0,0,0.2);
+            width: 100%;
+            height: 100%;
+        }
+
+        .captcha-popup {
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          display: none;
+          justify-content: center;
+          align-items: center;
+        }
+        
+        .captcha-popup-inner {
+          background-color: #fff;
+          padding: 8px 20px;
+          border-radius: 5px;
+          position: absolute;
+        }
+        .captcha-popup-inner input{
+            height: 32px;
+            padding: 0 4px;
+            border-width: 1px;
+        }
+        .captcha-popup-body{
+            display: flex;
+        }
+
+        .captcha-popup-inner img{
+            height: 34px;
+        }
+
+        #verifyButton{
+            display: block;
+            width: 100%;
+            margin: 10px 0;
+            height: 2rem;
+        }
+
+      </style>
+
+</head>
+<body>
+    <button id="captcha1">验证</button>
+    
+    <script>
+        let captcha = new Captcha({
+            generateUrl: "http://localhost:8000/captcha/image",
+            verifyURL  : "http://localhost:8000/captcha/verify",
+        });
+        captcha.bind("captcha1");
+    </script>
+</body>
+</html>

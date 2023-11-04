@@ -1,0 +1,32 @@
+inner-host: localhost
+
+server:
+  port: 8005
+  servlet:
+    context-path: /${spring.application.name}
+
+spring:
+  application:
+    name: nihil-test
+  cloud:
+    nacos:
+      discovery:
+        server-addr: ${inner-host}:8848
+        namespace: c92fc31d-1d77-4bc8-a8e3-fde1502394ec
+  security:
+    oauth2:
+      client:
+        registration:
+          default-client:
+            provider: default-provider
+            client-id: "default-client"
+            client-authentication-method: client_secret_basic
+            client-secret: "default-secret"
+            authorization-grant-type: "authorization_code"
+            scope: openid
+            redirect-uri: http://127.0.0.1:${server.port}/${spring.application.name}/login/oauth2/code/default-client
+        provider:
+          default-provider:
+            authorization-uri: http://127.0.0.1:8010/oauth2/authorize
+            token-uri: http://127.0.0.1:8010/oauth2/token
+            jwk-set-uri: http://127.0.0.1:8010/oauth2/jwks

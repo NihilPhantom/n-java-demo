@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.nihil.oauth2.mapper.UserMapper">
+    <select id="findById" resultType="com.nihil.common.auth.User">
+        SELECT * FROM user WHERE id = #{id}
+    </select>
+
+    <select id="findByUsername" resultType="com.nihil.common.auth.User">
+        SELECT * FROM user WHERE username = #{username}
+    </select>
+
+    <insert id="save" useGeneratedKeys="true" keyProperty="id">
+        INSERT INTO user(username, phone_number, password, real_name, mail)
+        VALUES(#{username}, #{phoneNumber}, #{password}, #{realName}, #{mail})
+    </insert>
+
+    <update id="update">
+        UPDATE user SET
+        username = #{username},
+        phone_number = #{phoneNumber},
+        password = #{password},
+        real_name = #{realName},
+        mail = #{mail}
+        WHERE id = #{id}
+    </update>
+
+    <delete id="deleteById">
+        DELETE FROM user WHERE id = #{id}
+    </delete>
+</mapper>

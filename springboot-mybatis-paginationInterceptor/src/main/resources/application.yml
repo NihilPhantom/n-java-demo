@@ -1,0 +1,13 @@
+server:
+  port: 8000
+
+spring:
+  datasource: # 配置数据库
+    url: jdbc:mysql://localhost:3306/test?serverTimezone=UTC&useAffectedRows=true
+    username: test
+    password: 12345678
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+mybatis:
+  configLocation: classpath:mybatis-config.xml
+
