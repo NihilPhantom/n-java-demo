@@ -1,10 +1,12 @@
-# SpringBoot 注解分页
+# Mybatis 拦截器分页
 
 ## 原理说明
 
 本项目使用Mybatis 的拦截器在SQL语句进行执行前，向sql语句中加入limit 语句实现分页功能。
 
-为了实现方便分页插件的拦截，要求实现分页的组件需要在第一个参数传入 PaginationData 类型的参数
+为了实现方便，分页插件的拦截要求实现分页的组件在第一个参数传入 PaginationData 类型的参数。
+
+以下是Mybatis 拦截器的接口功能说明：
 
 ```java
 public interface Interceptor {
