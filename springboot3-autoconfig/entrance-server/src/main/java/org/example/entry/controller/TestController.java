@@ -2,6 +2,7 @@ package org.example.controller;
 
 import jakarta.annotation.Resource;
 import org.example.entity.User;
+import org.example.service.SaleService;
 import org.example.service.UserService;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -12,6 +13,9 @@ public class TestController {
 
     @Resource
     UserService userService;
+
+    @Resource
+    SaleService saleService;
 
     @GetMapping("test")
     @ResponseBody
