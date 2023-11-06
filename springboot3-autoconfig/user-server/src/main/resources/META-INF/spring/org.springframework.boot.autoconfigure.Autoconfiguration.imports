@@ -1,1 +1,2 @@
-org.example.sale.AutoImport
+org.example.user.controller.UserController
+org.example.user.service.UserService

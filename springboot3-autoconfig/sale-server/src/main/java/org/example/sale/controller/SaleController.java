@@ -1,23 +1,22 @@
-package org.example.entry.controller;
+package org.example.sale.controller;
 
 import jakarta.annotation.Resource;
 
+import org.example.sale.entity.Sale;
 import org.example.sale.service.SaleService;
-import org.example.user.entity.User;
-import org.example.user.service.UserService;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
-public class TestController {
+public class SaleController {
 
     @Resource
-    UserService userService;
+    SaleService saleService;
 
-    @GetMapping("test")
+    @GetMapping("sale")
     @ResponseBody
-    User test(){
-        return userService.getUser();
+    Sale test(){
+        return saleService.getSale();
     }
 }

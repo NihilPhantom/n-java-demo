@@ -11,6 +11,7 @@
     <modules>
         <module>user-server</module>
         <module>entrance-server</module>
+        <module>sale-server</module>
     </modules>
 
     <parent>
