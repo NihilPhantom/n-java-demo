@@ -8,7 +8,7 @@
 - [map-cache](/map-cache) 向 HasMap 中加入了过期超时机制，实现缓存功能。
 - [mybatis-gernerate](/mybatis-gernerate/) MyBatis generator 插件自动生成实体类。
 - [oauth2-token-with-id](/oauth2-token-with-id) 一个 Spring3 下的OAuth2案例，自定义了带有id的token。
-- [springboot-autoconfig8](/springboot-autoconfig8) 一个 Spring2 下的自动注入案例，实现了pom导包后，自动注入错误处理方法。
+- [springboot2-autoconfig](/springboot2-autoconfig) 一个 Spring2 下的自动注入案例，实现了pom导包后，自动注入错误处理方法。
 - [springboot3-autoconfig](/springboot3-autoconfig) 一个 Spring3 下的自动注入案例，实现了pom导包后，自动注入Controller 和 Service。
 - [springboot-captcha](/springboot-captcha) 验证码生成案例，前后端分离，自带JS工具类。
 - [springboot-getMappers](/springboot-getMappers) 使用RequestMappingHandlerMapping获取所有的路由路径案例。

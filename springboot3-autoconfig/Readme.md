@@ -3,8 +3,8 @@
 本案例实现了引入 jar 包时自动注入 Controller、Service、Mapper
 
 ## 目录说明
-- entrance-server: 提供SpringBoot 的 Main 方法，是整改系统的入口
-- user-server：直接注入类，实现了 Controller、Service 的注入
+- entrance-server: 提供SpringBoot 的 Main 方法，是整个系统的入口
+- user-server：通过直接注入类，实现了 Controller、Service 的注入
 - sale-server：利用@ComponentScan，直接注入一个包下的所有组件，实现了Controller、Service、Mapper 的注入
 
 ## 特别说明
